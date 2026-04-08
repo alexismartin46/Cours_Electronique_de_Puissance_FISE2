@@ -1,0 +1,69 @@
+clear all;
+close all;
+
+%% Parameters
+Is=0.2;
+dIs=0.3*Is;
+R=16.5;
+%L=1.9e-3;
+%C=4e-6;
+Vin=7.4;
+Vs=3.3;
+dVs=0.05;
+R1=560e3;
+R2=330e3;
+f=500e3;
+
+alpha=Vs/Vin;
+Lo=alpha*(1-alpha)*Vin/(f*dIs);
+Co=alpha*(1-alpha)*Vin/(8*(f^2)*Lo*dVs);
+
+Ki=6200/4;
+
+Ki2=0.5;
+Ti2=1/6200;
+
+
+w=logspace(2,6,1000);
+
+%% Transfert function
+
+Buck=Vin./(1+1i*Lo/R.*w-Lo*Co.*w.^2);
+FB=R2/(R1+R2);
+
+OL=Buck*FB;
+
+Corr1=Ki./(1i.*w);
+Corr2=Ki2*(1+Ti2*1i*w)./(Ti2*1i*w);
+
+CL=Buck.*Corr1./(1+Buck.*Corr1.*FB);
+
+figure;
+subplot(2,1,1);
+semilogx(w,20*log10(abs(OL)));
+grid on;
+title('Open loop');
+subplot(2,1,2);
+semilogx(w,angle(OL)*180/pi);
+ylim([-180,0]);
+grid on;
+
+figure;
+subplot(2,1,1);
+semilogx(w,20*log10(abs(OL.*Corr1)));
+grid on;
+title('Open loop + corrector I');
+subplot(2,1,2);
+semilogx(w,unwrap(angle(OL.*Corr1))*180/pi);
+ylim([-180-90,0]);
+grid on;
+
+figure;
+subplot(2,1,1);
+semilogx(w,20*log10(abs(OL.*Corr2)));
+grid on;
+title('Open loop + corrector PI');
+subplot(2,1,2);
+semilogx(w,unwrap(angle(OL.*Corr2))*180/pi);
+ylim([-180-90,0]);
+grid on;

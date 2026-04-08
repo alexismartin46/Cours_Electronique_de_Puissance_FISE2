@@ -1,0 +1,45 @@
+\documentclass[a4paper,
+]{scrreprt}
+
+\usepackage{enseatitlepage}
+
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[final]{pdfpages}
+
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Pour avoir une police sans serif (plus lisible)
+\renewcommand{\familydefault}{\sfdefault}
+
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+% Title Page
+%\titlehead{Document de travail}
+\title{Electronique de Puissance}
+\subtitle{DEE\_2401}
+\subject{TP}
+\author{Alexis MARTIN}
+\date{\the\year}
+\degree{Semestre 7}
+
+\usepackage{lipsum}
+
+\begin{document}
+\maketitle
+
+
+\include{Intro_TP/Intro_TP}
+
+\include{TP_Buck/TP_Buck}
+\include{TP_H4Q/TP_H4Q}
+\include{TP_Flyback/TP_Flyback}
+\include{TP_Forward/TP_Forward}
+
+\includepdf[pages={2,3}]{CORE_ETD_29_16_10.pdf}	% Documentation technique noyau magnétique Flyback/Forward
+
+
+\end{document}

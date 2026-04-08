@@ -1,0 +1,12 @@
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QBatterie LiPo 2S \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Tension d'alimentation du microprocesseur : \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Ondulation de tension max en entrée du microprocesseur : \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Courant nominal de sortie: \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Ondulation de courant: 30%\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QConvertisseur Buck.\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QL'objectif est d'utiliser le logiciel LTSpice afin de simuler le circuit et d'en comprendre le fonctionnement.\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QLTSpice est un logiciel fourni par Analog Device, basé sur de la simulation Spice.\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QLa documentation du logiciel est disponible sur le site d'Analog Device: \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QBatterie LiPo 2S \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Tension d'alimentation du microprocesseur : \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Ondulation de tension max en entrée du microprocesseur : \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Courant nominal de sortie : \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Ondulation de courant : 30%\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QVoici un bref résumé de l'interface LTSpice.\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QPour plus d'information, vous pouvez vous référer à la page d'Analog Device: \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QCréer un nouveau Schematic et placer le LT1959.\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QLa broche \"SYNC\" ne sera pas utilisée.\\E$"}
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QPour cela, aller dans \"Simulate\" \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \"Configure Analysis\" \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \"Transcient\" et réaliser une simulation sur 3ms.\\E$"}
+{"rule":"PAS_DE_VERBE_APRES_POSSESSIF_DEMONSTRATIF","sentence":"^\\QAjouter un générateur de courant en parallèle de la résistance \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q afin de générer un pulse de courant.\\E$"}

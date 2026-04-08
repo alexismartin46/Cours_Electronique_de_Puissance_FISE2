@@ -1,0 +1,78 @@
+\chapter{Alimentation à découpage directe (FORWARD Asymétrique)}
+
+Le but de ce problème est l’étude simplifiée du convertisseur à découpage représenté sur la figure suivante :
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\linewidth]{TD_Forward_Asymetrique/fig/Forward_Asymetrique.png}
+\end{figure}
+
+Tous les semi-conducteurs sont supposés parfaits. Les deux bobinages du transformateur sont réalisés sur le même noyau ferromagnétique sans fuites : toutes les spires ''enlacent''  donc le même flux élémentaire $\varphi$, la réluctance de ce circuit magnétique étant notée $R$. La bobine d'inductance $L$ en sortie est indépendante de ce transformateur. Toutes les résistances sont négligées.
+
+La commande des transistors est identique, réalisée à la période $T$, avec un rapport cyclique noté $\alpha$ : ils sont donc conducteurs
+sur l'intervalle $[0,\ \alpha.T]$, bloqués sur l’intervalle $[\alpha.T,\ T]$.
+
+La tension de sortie $V_s$ est supposée constante dans toute l’étude et le dispositif sera maintenu en démagnétisation totale à chaque cycle de fonctionnement. On ne s'intéresse qu'au régime de conduction continue dans l'inductance de sortie $L$, son courant ne s'annulant donc jamais : $i_L > 0$.
+
+\begin{enumerate}
+\item \textbf{Fonctionnement général de l'alimentation}
+
+Dans cette partie, nous allons étudier le fonctionnement de l’alimentation. On supposera qu'elle fonctionne en \textbf{démagnétisation totale}, c'est à dire qu'à la fin d'une période, le flux magnétique dans le transformateur est nul. On tracera au fur et à mesure les courbes temporelles de $\varphi$ (flux magnétique dans le transformateur), $v_1$, $v_2$, $v_{DS}$ (tension drain-source du transistor $T_1$), $v_L$, $i_1$, $i_2$, $i_L$, et $i_E$.
+
+\begin{enumerate}
+
+\item Compte tenu des sens des enroulements représentés sur le schéma et des sens de mesure des différents courants et tensions :
+\begin{enumerate}
+\item Donner l'expression des tensions $v_1$ et $v_2$ en fonction du flux $\varphi$
+\item Exprimer la relation d'Hopkinson liant les courants $i_1$ et $i_2$ à ce même flux $\varphi$ au moyen des nombres de spires et de la réluctance $R$.
+\end{enumerate}
+
+\item On se place sur l'intervalle $[0,\ \alpha T]$ : on suppose que le flux initial à t = 0 est nul (démagnétisation totale)
+\begin{enumerate}
+\item Déterminer la tension $v_1$ appliquée au bobinage primaire
+\item En déduire la tensions $v_2$ ainsi que l'état des diodes $D3$ et $D4$
+\item Donner l'expression de la tension $v_L$ aux bornes de l'inductance de sortie en fonction des nombres de spires, de $E$ et $V_S$
+\item Exprimer l'évolution du flux $\varphi (t)$ sur cet intervalle de temps
+\item Exprimer le courant $i_2$ en fonction de $i_L$
+\item A partir de la relation d'Hopkinson et des résultats précédents, déterminer l'expression du courant primaire $i_1$ en fonction de $i_L$ et du flux $\varphi$ au moyen des nombres de spires et de la réluctance $R$
+\item A l'instant $\alpha T$, fin de ce premier intervalle de temps, on suppose que le flux est devenu égal à $\varphi_0$. En déduire l'expression de cette valeur de $\varphi_0$ en fonction de $E$, $n_1$ et $\alpha T$
+\end{enumerate}
+
+\item On se place sur l'intervalle $[\alpha T,\ T]$ : tous les transistors sont bloqués. 
+\begin{enumerate}
+\item A $t=\alpha T$, déterminer l'état des diodes $D1$ et $D2$. Quelle sont les valeurs des tensions $v_1$ et $v_2$ ? En déduire l'état des diodes $D3$ et $D4$
+\item En déduire l'expression de $v_L$ en fonction de $V_S$
+\item Exprimer l'évolution du flux $\varphi(t)$ sur cet intervalle de temps
+\item A quel instant $t_0$ le flux s'annule ? Donner une condition sur $\alpha$ pour que le système fonctionne en démagnétisation totale
+\item Que se passe-t-il ensuite jusqu’à la fin de la période T ?
+\end{enumerate}
+
+\item L’alimentation est destinée à fabriquer une tension constante de valeur 24 V à partir du réseau monophasé redressé parfaitement filtré, $E = 300 V$. La puissance transmise est $P_n = 600 W$, la fréquence de découpage est $f = 50 kHz$. On choisit de faire fonctionner l’alimentation autour du rapport cyclique nominal $\alpha = 0.4$.
+\begin{enumerate}
+\item Calculer le rapport de transformation $n_2/n_1$
+\item Calculer la valeur moyenne $I_s$ du courant $i_L$
+\item Calculer la valeur minimale à donner à l’inductance $L$ pour limiter l’ondulation crête à crête du courant $i_L$ à 5\% de sa valeur moyenne $I_s$. \underline{On gardera cette} \underline{valeur de $L$ par la suite}
+\item En déduire la valeur maximale $I_{1\ max}$ du courant dans le transistor lorsque l’on néglige le courant magnétisant
+\end{enumerate}
+
+\end{enumerate}
+
+\item \textbf{Dimensionnement du transformateur}
+
+\begin{enumerate}
+\item Pour justifier l'hypothèse précédente, déterminer la valeur minimale de l’inductance magnétisante $L_1$ (vue du bobinage au primaire) rendant le courant à vide maximal inférieur à $I_{1\ max} /20$
+
+\item \underline{En négligeant l’ondulation du courant $i_L$ et le courant magnétisant}, déterminer les valeurs efficaces $I_{1\ eff}$ et
+$I_{2\ eff}$ des courants $i_1$ et $i_2$ en fonction de $I_s$, $n_1$ , $n_2$ et $\alpha$
+\item Déterminer, avec ces mêmes hypothèses, la surface de bobinage minimale nécessaire $S_B$ en fonction de $\delta$ (densité de courant), $k_B$ (coefficient de bobinage), $I_s$, $n_2$ et $\alpha$
+\item Donner également l’expression de la section minimale $A_e$ du noyau permettant d’éviter la saturation du noyau en maintenant une induction maximale inférieure à $B_{max}$
+\item En déduire le produit de dimensionnement $A_e.S_B$ minimal de ce transformateur en fonction du rapport cyclique, des différents paramètres caractéristiques de cette alimentation, notamment sa puissance de sortie $P_S$ et sa fréquence de découpage $f$
+
+\end{enumerate}
+
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\linewidth]{TD_Forward_Asymetrique/fig/doc_reponse.png}
+\end{figure}
