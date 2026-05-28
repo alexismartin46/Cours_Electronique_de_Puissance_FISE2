@@ -101,8 +101,7 @@ $n_1 i_1 + n_2 i_2 = R \varphi$
 \ifthenelse{\equal{\SuCorr}{CO}}{
 $<v_1> = 0$ $\rightarrow$ $E \alpha - \dfrac{n_1}{n_2} V_S (1-\alpha) = 0$ $\rightarrow$ $V_S = m\dfrac{\alpha}{1-\alpha} E$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TO CONTINUE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+$m = \dfrac{V_S}{E} \dfrac{1-\alpha}{\alpha} = 0.067$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -113,26 +112,39 @@ déduire la valeur numérique de l'inductance $L_1$.
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-$I_{S0} = <i_2> = \dfrac{1}{T} \int_{0}^{T} i_2(t) dt = \dfrac{1}{T} \int_{\alpha T}^{T} i_2(t) dt$
+$I_{S0} = <i_2> = (1-\alpha) \dfrac{i_{2\ \max}}{2}=\dfrac{1-\alpha}{2}.\dfrac{R \varphi_{\max}}{n_2}=\dfrac{1-\alpha}{2} \dfrac{n_1}{n_2}.i_{1\ \max}$
+
+$I_{S0}=\dfrac{1-\alpha}{2\ m}\dfrac{E}{L_1}\alpha T=\dfrac{\alpha(1-\alpha)E}{2\ m L_1 f}$
 }
 
+% \ifthenelse{\equal{\Langue}{FR}}{
+% \item Calculer de deux façons différentes l'énergie $W_D$ fournie par cycle de découpage à la batterie.
+% }{
+% \item Calculate the energy $W_D$ delivered to the battery per switching cycle using two different methods.
+% }
+
+% \ifthenelse{\equal{\SuCorr}{CO}}{
+
+% }
+
+% \ifthenelse{\equal{\Langue}{FR}}{
+% \item Calculer numériquement cette énergie $W_D$ et en déduire le temps de charge à courant constant pour une batterie de `` capacité'' 25 Ah.
+% }{
+% \item Calculate the numerical value of this energy $W_D$ and determine the charging time at constant current for a battery with a ``capacity'' of 25 Ah.
+% }
+
 \ifthenelse{\equal{\Langue}{FR}}{
-\item Calculer de deux façons différentes l'énergie $W_D$ fournie par cycle de découpage à la batterie.
+\item Calculer l'énergie $W_D$ fournie par cycle de découpage à la batterie. En déduire le temps de charge à courant constant pour une batterie de `` capacité'' 25 Ah.
 }{
-\item Calculate the energy $W_D$ delivered to the battery per switching cycle using two different methods.
+\item Calculate the energy $W_D$ delivered to the battery per switching cycle. Determine the charging time at constant current for a battery with a ``capacity'' of 25 Ah.
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$W_D=V_s.<i_2>.T = V_s.I_{S0}.T=\dfrac{V_s I_{S0}}{f}=0.01\ J$
 
-}
+\ifthenelse{\equal{\Langue}{FR}}{Energie dans la batterie}{Energy in the battery}: $W_{batt}=250 \times 3600 \times 24 = 21.6 .10^6 \ J$
 
-\ifthenelse{\equal{\Langue}{FR}}{
-\item Calculer numériquement cette énergie $W_D$ et en déduire le temps de charge à courant constant pour une batterie de `` capacité'' 25 Ah.
-}{
-\item Calculate the numerical value of this energy $W_D$ and determine the charging time at constant current for a battery with a ``capacity'' of 25 Ah.
-}
-
-\ifthenelse{\equal{\SuCorr}{CO}}{
+\ifthenelse{\equal{\Langue}{FR}}{Temps de charge}{Charging time}: $t_{charge} = \dfrac{W_{batt}}{W_D.f}= \dfrac{21.6.10^6}{0.01 \times 20 \times 10^3} = 108 000s = 30h$ 
 
 }
 
@@ -142,28 +154,75 @@ $I_{S0} = <i_2> = \dfrac{1}{T} \int_{0}^{T} i_2(t) dt = \dfrac{1}{T} \int_{\alph
 %%%%%% Partie 2 %%%%%%%
 \ifthenelse{\equal{\Langue}{FR}}{
 \item \textbf{Fin de charge}
-
-Lors de la charge, la tension de sortie évolue lentement de $V_{S0}$ à $V_{S1}$, le rapport cyclique étant maintenu à $\alpha_0$.
-\begin{enumerate}
-\item Comment le régime de conduction de l'alimentation a-t-il été modifié?
-\item  Représenter sur une période de découpage l'allure des signaux $ i_1$, $i_2$, $v_T$ et $v_1$.
-\item Quelle est la durée de conduction de la diode D\@?
-\item Que vaut maintenant l'énergie transférée par cycle? En déduire le courant moyen $I_S$ fourni à la batterie.
-\item Quelle valeur $\alpha_1$ faudrait-il donner au rapport cyclique pour fournir ensuite un courant moyen de charge de batterie 
-$I_{S1} = I_{S0}/10$?
-\end{enumerate}
 }{
 \item \textbf{End of charging}
-
-During the charging process, the output voltage slowly increases from $V_{S0}$ to $V_{S1}$ while maintaining the duty cycle at $\alpha_0$.
-\begin{enumerate}
-\item How has the conduction mode of the power supply been modified?
-\item Plot the waveforms of $i_1$, $i_2$, $v_T$, and $v_1$ over one switching period.
-\item What is the conduction time of the diode D\@?
-\item What is the energy transferred per cycle now? Determine the average current $I_S$ supplied to the battery.
-\item What value $\alpha_1$ should be given to the duty cycle to subsequently provide an average charging current of $I_{S1} = I_{S0}/10$?
-\end{enumerate}
 }
+
+\ifthenelse{\equal{\Langue}{FR}}{
+Lors de la charge, la tension de sortie évolue lentement de $V_{S0}$ à $V_{S1}$, le rapport cyclique étant maintenu à $\alpha_0$.
+}{
+During the charging process, the output voltage slowly increases from $V_{S0}$ to $V_{S1}$ while maintaining the duty cycle at $\alpha_0$.
+}
+
+
+\begin{enumerate}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Comment le régime de conduction de l'alimentation a-t-il été modifié?
+}{
+\item How has the conduction mode of the power supply been modified?
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$V_s \uparrow \ \rightarrow \alpha T < t < T: \frac{di_2}{dt}=-\dfrac{R V_s}{n_2^2 } \ \downarrow$
+
+$\Rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{Démagnétisation totale}{Full demagnetisation}
+}
+
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item  Représenter sur une période de découpage l'allure des signaux $ i_1$, $i_2$, $v_T$ et $v_1$.
+}{
+\item Plot the waveforms of $i_1$, $i_2$, $v_T$, and $v_1$ over one switching period.
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Quelle est la durée de conduction de la diode D\@?
+}{
+\item What is the conduction time of the diode D\@?
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Que vaut maintenant l'énergie transférée par cycle? En déduire le courant moyen $I_S$ fourni à la batterie.
+}{
+\item What is the energy transferred per cycle now? Determine the average current $I_S$ supplied to the battery.
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Quelle valeur $\alpha_1$ faudrait-il donner au rapport cyclique pour fournir ensuite un courant moyen de charge de batterie 
+$I_{S1} = I_{S0}/10$?
+}{
+\item What value $\alpha_1$ should be given to the duty cycle to subsequently provide an average charging current of $I_{S1} = I_{S0}/10$?
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\end{enumerate}
+
 
 %%%%%% Partie 3 %%%%%%%
 \ifthenelse{\equal{\Langue}{FR}}{
