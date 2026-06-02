@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1N914BWT
+D Fast Switching Diode (Trr < 4.0nsec) ; Flat Lead, Surface Mount Device Under 0.70mm Height ; Matte Tin (Sn) Lead Finish ; Green Mold Compound; Extremely Small Outline Plastic Package SOD523F ; Moisture Level Sensitivity 1 ; Pb-free Version and RoHS Compliant
+K
+F https://www.onsemi.com/pub/Collateral/1N914BWT-D.pdf
+$ENDCMP
+#
+#End Doc Library

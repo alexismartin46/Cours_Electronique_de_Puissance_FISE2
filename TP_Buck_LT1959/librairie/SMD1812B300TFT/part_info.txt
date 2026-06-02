@@ -1,0 +1,9 @@
+Manufacturer=Yageo Group
+PartNumber=SMD1812B300TFT
+PartCategory=Resettable Fuse
+PackageCategory=Fuses Chip
+PinCount=2
+Version=1.1
+Released=2025-08-11 00:21:50
+Downloaded=2026-04-03 10:31:46
+3D=Y

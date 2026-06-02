@@ -1,0 +1,9 @@
+Manufacturer=onsemi
+PartNumber=1N914BWT
+PartCategory=Diode
+PackageCategory=Other
+PinCount=2
+Version=3.2
+Released=2018-05-22 16:56:59
+Downloaded=2026-02-27 12:28:45
+3D=N

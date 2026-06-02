@@ -1,0 +1,5 @@
+(design_block_lib_table
+  (version 7)
+  (lib (name "3D")(type "KiCad")(uri "${KIPRJMOD}/librairie/LT1959CS8#PBF/3D")(options "")(descr ""))
+  (lib (name "KiCad")(type "KiCad")(uri "${KIPRJMOD}/librairie/352247RFT/KiCad")(options "")(descr ""))
+)

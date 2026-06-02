@@ -1,0 +1,9 @@
+Manufacturer=C & K COMPONENTS
+PartNumber=L203011MS02Q
+PartCategory=Switch
+PackageCategory=Other
+PinCount=8
+Version=5.4
+Released=2020-08-28 14:28:42
+Downloaded=2026-04-01 14:31:51
+3D=Y

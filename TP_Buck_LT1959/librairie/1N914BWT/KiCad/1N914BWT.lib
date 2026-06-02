@@ -1,0 +1,26 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 1N914BWT
+#/839657/881295/2.50/2/2/Diode
+DEF 1N914BWT D 0 30 Y Y 1 F N
+F0 "D" 450 200 50 H V L CNN
+F1 "1N914BWT" 450 100 50 H V L CNN
+F2 "1N914BWT" 450 0 50 H I L CNN
+F3 "https://www.onsemi.com/pub/Collateral/1N914BWT-D.pdf" 450 -100 50 H I L CNN
+F4 "Fast Switching Diode (Trr < 4.0nsec) ; Flat Lead, Surface Mount Device Under 0.70mm Height ; Matte Tin (Sn) Lead Finish ; Green Mold Compound; Extremely Small Outline Plastic Package SOD523F ; Moisture Level Sensitivity 1 ; Pb-free Version and RoHS Compliant" 450 -200 50 H I L CNN "Description"
+F5 "0" 450 -300 50 H I L CNN "Height"
+F6 "512-1N914BWT" 450 -400 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/1N914BWT?qs=2%2FYqgE%252BHg%252BJnRpEg%2FZgVrg%3D%3D" 450 -500 50 H I L CNN "Mouser Price/Stock"
+F8 "onsemi" 450 -600 50 H I L CNN "Manufacturer_Name"
+F9 "1N914BWT" 450 -700 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ~ 1 0 0 100 R 50 50 0 0 P
+X ~ 2 600 0 100 L 50 50 0 0 P
+P 2 0 1 6 200 100 200 -100 N
+P 2 0 1 6 100 0 200 0 N
+P 2 0 1 6 400 0 500 0 N
+P 4 0 1 10 200 0 400 100 400 -100 200 0 F
+ENDDRAW
+ENDDEF
+#
+#End Library

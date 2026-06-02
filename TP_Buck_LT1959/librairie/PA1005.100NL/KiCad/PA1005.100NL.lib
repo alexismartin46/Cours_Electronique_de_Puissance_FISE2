@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model PA1005.100NL
+#/1240647/881295/2.50/8/4/Transformer
+DEF PA1005.100NL T 0 30 Y Y 1 F N
+F0 "T" 650 500 50 H V L CNN
+F1 "PA1005.100NL" 650 400 50 H V L CNN
+F2 "PA1005100NL" 650 300 50 H I L CNN
+F3 "http://productfinder.pulseeng.com/products/datasheets/SPM2007_58.pdf" 650 200 50 H I L CNN
+F4 "CURR SENSE XFMR 1:100 20A SMD" 650 100 50 H I L CNN "Description"
+F5 "5.5" 650 0 50 H I L CNN "Height"
+F6 "673-PA1005.100NL" 650 -100 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Pulse-Electronics/PA1005.100NL?qs=l7cgNqFNU1jb6OQ1wXLriw%3D%3D" 650 -200 50 H I L CNN "Mouser Price/Stock"
+F8 "Yageo Group" 650 -300 50 H I L CNN "Manufacturer_Name"
+F9 "PA1005.100NL" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 300 -500 200 U 50 50 0 0 P
+X 2 2 400 -500 200 U 50 50 0 0 P
+X 3 3 500 -500 200 U 50 50 0 0 P
+X 4 4 500 500 200 D 50 50 0 0 P
+X 5 5 400 500 200 D 50 50 0 0 P
+X 6 6 300 500 200 D 50 50 0 0 P
+X 7 7 0 0 200 R 50 50 0 0 P
+X 8 8 800 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 300 600 300 600 -300 200 -300 200 300 N
+ENDDRAW
+ENDDEF
+#
+#End Library

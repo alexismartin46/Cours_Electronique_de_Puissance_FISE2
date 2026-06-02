@@ -1,0 +1,9 @@
+Manufacturer=Yageo Group
+PartNumber=PA1005.100NL
+PartCategory=Transformer
+PackageCategory=Other
+PinCount=8
+Version=1.2
+Released=2020-02-13 11:11:38
+Downloaded=2026-02-27 12:29:10
+3D=Y
