@@ -577,7 +577,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Fichiers_Fab/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

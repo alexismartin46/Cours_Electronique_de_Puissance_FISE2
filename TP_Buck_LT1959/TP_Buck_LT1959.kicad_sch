@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "TP Buck (LT1959)")
-		(date "2026-06-01")
+		(date "2026-06-19")
 		(rev "V2")
 		(company "ENSEA")
 		(comment 1 "A. Martin")
@@ -7346,7 +7346,7 @@
 				)
 			)
 		)
-		(property "Value" "MBR0540-TP"
+		(property "Value" "PMEG40T20ERX"
 			(at 204.7875 127 0)
 			(effects
 				(font
@@ -8765,7 +8765,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD1812B075TF"
+		(property "Value" "SMD1812B075TF/33"
 			(at 229.87 127 90)
 			(effects
 				(font
