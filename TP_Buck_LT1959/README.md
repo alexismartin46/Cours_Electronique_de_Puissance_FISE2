@@ -13,7 +13,7 @@ Cette maquette est développée autour du LT1959, controleur de Buck avec transi
 - Inductance de lissage modifiable parmi 3 valeurs
 - Condensateur de lissage de sortie modifiable parmi 3 valeurs
 - Charge en sortie (résistance) modifiable parmi 3 valeurs
-- Courant d'entré max possible pour le LT1959 : 4 A
+- Courant d'entrée max possible pour le LT1959 : 4 A
 - Sécurité contre l'inversion de la tension en entrée, contre les surtensions en entrée, ainsi que les court-circuit
 
 La maquette telle qu'elle est développée, permet d'étudier le mode de conduction contunu et discontinu d'un tel convertisseur (CCM et DCM).
