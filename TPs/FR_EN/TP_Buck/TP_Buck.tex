@@ -147,22 +147,70 @@ $\Rightarrow$ ``\textit{Transient}'' and perform a simulation over 3 ms.
 }
 \end{enumerate}
 
+% \ifthenelse{\equal{\Langue}{FR}}{
+% \section{Rapidité et stabilité du système}
+% }{
+% \section{System Speed and Stability}
+% }
+
+% \begin{enumerate}
+% \ifthenelse{\equal{\Langue}{FR}}{
+%     \item Modifier la valeur de $C$ et mesurer le temps de réponse à 5\%. Commenter.
+%     \item En modifiant la valeur de $R$ déterminer la valeur maximale de la résistance à partir de laquelle le système devient instable.
+%     \item Ajouter un générateur de courant en parallèle de la résistance $R_s$ afin de générer un pulse de courant (une fois le système en régime permanent). 
+%     Ce pulse peut modéliser une perturbation CEM sur le système. Déterminer la nouvelle valeur de $R$ à partir de laquelle le système devient instable lors d'une perturbation.
+% }{
+%     \item Modify the value of $C$ and measure the 5\% time response. Comment.
+%     \item By modifying the value of $R$, determine the maximum value of the resistance from which the system becomes unstable.
+%     \item Add a current generator in parallel with the resistance $R_s$ to generate a current pulse (once the system is in steady state). 
+%     This pulse can model an EMC disturbance on the system. Determine the new value of $R$ from which the system becomes unstable during a disturbance.
+% }
+% \end{enumerate}
+
 \ifthenelse{\equal{\Langue}{FR}}{
-\section{Rapidité et stabilité du système}
+\section{Mesure sur le circuit réel}
 }{
-\section{System Speed and Stability}
+\section{Measurement on the real circuit}
 }
+
+\ifthenelse{\equal{\Langue}{FR}}{
+Une maquette du circuit permet de réaliser des mesures sur le circuit réel. Trois commutateurs permettent de faire varier l'inductance $L_1$, la capacité $C_1$ et la résistance de charge $R_m$. Voici les valeurs présentes sur la maquette:
+}{
+A model of the circuit allows measurements to be made on the real circuit. Three switches allow to vary the inductance $L_1$, the capacitance $C_1$ and the load resistance $R_m$. Here are the values present on the model:
+}
+\begin{itemize}
+\item $L_1$: $L1 = 4.7 \mu H$, $L2 = 68 \mu H$, $L3 = 680 \mu H$ 
+\item $C_1$: $C4 = 33 n F$, $C5 = 330 n F$, $C6 = 1 \mu F$
+\item $R_m$: $R5 = 5.6 \Omega$, $R6 = 15 \Omega$, $R7 = 46 \Omega$
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{TP_Buck/fig/Maquette.png}
+\end{figure}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+Les transformateurs de courant $T1$ et $T2$, avec les résistances $R1$ et $R8$, permettent de mesurer respectivement le courant dans le condensateur de sortie $C_1$ (points de test ``ic+'' et ``ic-'') et dans l'inductance de filtrage $L_1$ (points de test ``il+'' et ``il-''). 
+
+La mesure des courants est ainsi isolée du circuit, le gain de la mesure est de 1V/A. \textbf{Attention: l'éventuelle composante continue du courant mesuré est supprimée par le transformateur de courant}. Il n'est donc pas possible de mesurer le courant moyen dans $L_1$ ou $C_1$ avec ce montage.
+}{
+The current transformers $T1$ and $T2$, with the resistances $R1$ and $R8$, allow to measure respectively the current in the output capacitor $C_1$ (test points ``ic+'' and ``ic-'') and the filtering inductance $L_1$ (test points ``il+'' and ``il-''). 
+
+The current measurement is thus isolated from the circuit, the measurement gain is 1V/A. \textbf{Warning: any DC component of the measured current is removed by the current transformer}. It is therefore not possible to measure the average current in $L_1$ or $C_1$ with this setup.
+}
+
 
 \begin{enumerate}
 \ifthenelse{\equal{\Langue}{FR}}{
-    \item Modifier la valeur de $C$ et mesurer le temps de réponse à 5\%. Commenter.
-    \item En modifiant la valeur de $R$ déterminer la valeur maximale de la résistance à partir de laquelle le système devient instable.
-    \item Ajouter un générateur de courant en parallèle de la résistance $R_s$ afin de générer un pulse de courant (une fois le système en régime permanent). 
-    Ce pulse peut modéliser une perturbation CEM sur le système. Déterminer la nouvelle valeur de $R$ à partir de laquelle le système devient instable lors d'une perturbation.
+\item Pour les valeurs de $L_1$, $C_1$ et $R_m$ choisies pour respecter le cahier des charges, mesurer la fréquence de découpage, l'ondulation de courant dans $L_1$ et l'ondulation de tension de sortie. Commparer avec les résultats théoriques et de la simulation.
+\item Pour $C_1 = 33 nF$ et $R_m = 15 \Omega$, mesurer l'ondulation de courant dans $L_1$ pour les trois valeurs de $L_1$. Commenter.
+\item Pour $L_1 = 68 \mu H$ et $R_m = 15 \Omega$, mesurer l'ondulation de tension de sortie pour les trois valeurs de $C_1$. Commenter.
+\item Pour $L_1 = 68 \mu H$ et $C_1 = 330 nF$, mesurer l'ondulation de tension de sortie pour les trois valeurs de $R_m$. Commenter. 
 }{
-    \item Modify the value of $C$ and measure the 5\% time response. Comment.
-    \item By modifying the value of $R$, determine the maximum value of the resistance from which the system becomes unstable.
-    \item Add a current generator in parallel with the resistance $R_s$ to generate a current pulse (once the system is in steady state). 
-    This pulse can model an EMC disturbance on the system. Determine the new value of $R$ from which the system becomes unstable during a disturbance.
+\item For the values of $L_1$, $C_1$ and $R_m$ chosen to meet the specifications, measure the switching frequency, the current ripple in $L_1$ and the output voltage ripple. Compare with theoretical and simulation results.
+\item For $C_1 = 33 nF$ and $R_m = 15 \Omega$, measure the current ripple in $L_1$ for the three values of $L_1$. Comment.
+\item For $L_1 = 68 \mu H$ and $R_m = 15 \Omega$, measure the output voltage ripple for the three values of $C_1$. Comment.
+\item For $L_1 = 68 \mu H$ and $C_1 = 330 nF$, measure the output voltage ripple for the three values of $R_m$. Comment.
 }
 \end{enumerate}
+

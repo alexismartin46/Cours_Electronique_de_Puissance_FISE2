@@ -179,15 +179,19 @@ $V_s \uparrow \ \rightarrow \alpha T < t < T: \frac{di_2}{dt}=-\dfrac{R V_s}{n_2
 $\Rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{Démagnétisation totale}{Full demagnetisation}
 }
 
-
 \ifthenelse{\equal{\Langue}{FR}}{
-\item  Représenter sur une période de découpage l'allure des signaux $ i_1$, $i_2$, $v_T$ et $v_1$.
+\item  Représenter sur une période de découpage l'allure des signaux $ i_1$, $i_2$, $v_T$, $v_1$ et $\varphi$.
 }{
-\item Plot the waveforms of $i_1$, $i_2$, $v_T$, and $v_1$ over one switching period.
+\item Plot the waveforms of $i_1$, $i_2$, $v_T$, $v_1$ and $\varphi$ over one switching period.
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth]{TD_Flyback/fig/Flyback_Q22_I12.png}
+\includegraphics[width=0.45\linewidth]{TD_Flyback/fig/Flyback_Q22_phi_v12.png}
 
+\end{figure}
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -197,7 +201,21 @@ $\Rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{Démagnétisation totale}{Full de
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$i_{1\ \max} = \dfrac{E}{L_1} \alpha_0 T$
 
+\ifthenelse{\equal{\Langue}{FR}}{
+Continuité du flux à}{Flux continuity at} $t= \alpha T$ $\rightarrow$ $n_2 i_{2 \ \max} = n_1 i_{1\ \max}$ $\rightarrow$ $i_{2\ \max} = \dfrac{E \alpha_0 T}{L_1 m}$
+
+Hopkinson: $n_1 i_1 + n_2 i_2 = n_1 i_{10}$
+
+$\alpha_0 T < t < \alpha'T$: $i_1=0$ $\rightarrow$ $n_2 i_2 = n_1 i_{10}$ $\rightarrow$ $\dfrac{d i_2}{d_t} = -\dfrac{1}{m} \dfrac{d i_{10}}{dt}= \dfrac{1}{L_1 m} v_1$ 
+
+$\dfrac{d i_2}{dt} = \dfrac{E+\dfrac{V_s}{m}}{L_1 m}$
+
+\ifthenelse{\equal{\Langue}{FR}}{Durée de conduction de D}{Conduction time of D}:
+$\Delta t = \dfrac{i_{2\ \max}}{\dfrac{d i_2}{dt}} = \dfrac{E \alpha_0 T}{(E+\dfrac{V_s}{m})} = 11 \mu s$
+
+\ifthenelse{\equal{\Langue}{FR}}{On peut vérifier que $\Delta t < (1 - \alpha_0) T = 25 \mu s$}{We can verify that $\Delta t < (1 - \alpha_0) T = 25 \mu s$} $\rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{Démagnétisation totale}{Full demagnetisation}
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -207,7 +225,9 @@ $\Rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{Démagnétisation totale}{Full de
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$W_D = E <i_1> T = 0.01 J$ \ifthenelse{\equal{\Langue}{FR}}{(Energie inchangée)}{(Energy unchanged)}
 
+$W_D = \dfrac{V_S I_S}{f}$ $\rightarrow$ $I_S = \dfrac{W_D f}{V_S} = 8.3 A$ 
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -218,7 +238,9 @@ $I_{S1} = I_{S0}/10$?
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$I_s = \dfrac{W_D f}{V_S} = \dfrac{E <i_1>}{V_S} = \dfrac{E}{V_S} \alpha_1 \dfrac{E}{2 L_1} \alpha_1 T = \dfrac{E^2 \alpha_1^2}{2 V_S L_1 f}$
 
+$\rightarrow \alpha_1 = \sqrt{\dfrac{2 V_S L_1 f I_{S1}}{E^2}} = 0.17$
 }
 
 \end{enumerate}
@@ -227,81 +249,148 @@ $I_{S1} = I_{S0}/10$?
 %%%%%% Partie 3 %%%%%%%
 \ifthenelse{\equal{\Langue}{FR}}{
 \item \textbf{Limite de saturation}
-
-On se place en régime critique (début de charge)
-
-\begin{enumerate}
-\item Déterminer l'expression de l'induction maximale dans la ferrite en fonction de E, $\alpha$, T, $n_1$ et $A_e$, surface effective de cette ferrite.
-\item En déduire l'expression de la valeur minimale $A_{e\ \min}$ de cette ferrite pour empêcher toute saturation du matériau: on notera pour cela $B_{sat}$ la valeur de l'induction au voisinage de la saturation.
-\end{enumerate}
 }{
 \item \textbf{Saturation limit}
+}
 
+\ifthenelse{\equal{\Langue}{FR}}{
+On se place en régime critique (début de charge)
+}{
 We are in the critical mode (start of charging).
+}
 
 \begin{enumerate}
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Déterminer l'expression de l'induction maximale dans la ferrite en fonction de E, $\alpha$, T, $n_1$ et $A_e$, surface effective de cette ferrite.
+}{
 \item Determine the expression of the maximum magnetic induction in the ferrite core in terms of $E$, $\alpha$, $T$, $n_1$, and $A_e$ (effective area of the core).
-\item Deduce the expression of the minimum value $A_{e\ \min}$ of the core area to prevent any saturation of the material. For this purpose, let $B_{sat}$ be the induction value near saturation.
-\end{enumerate}
 }
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$\varphi_{\max} = \dfrac{E}{n_1} \alpha T$ $\rightarrow$ $B_{\max} = \dfrac{\varphi_{\max}}{A_e} = \dfrac{E \alpha T}{n_1 A_e}$
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item En déduire l'expression de la valeur minimale $A_{e\ \min}$ de cette ferrite pour empêcher toute saturation du matériau: on notera pour cela $B_{sat}$ la valeur de l'induction au voisinage de la saturation.
+}{
+\item Deduce the expression of the minimum value $A_{e\ \min}$ of the core area to prevent any saturation of the material. For this purpose, let $B_{sat}$ be the induction value near saturation.
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$A_{e\ \min} = \dfrac{E \alpha T}{n_1 B_{sat}}$
+}
+
+\end{enumerate}
+
 
 %%%%%% Partie 4 %%%%%%%
 \ifthenelse{\equal{\Langue}{FR}}{
 \item \textbf{Surface de la fenêtre de bobinage}
-
-On reste en régime critique (début de charge)
-
-\begin{enumerate}
-\item En utilisant les résultats de la première partie, déterminer la valeur efficace $I_{1\ eff}$ du courant dans le transistor en fonction du courant de sortie $I_s$, de $m$ et $\alpha$.
-\item Faire de même pour exprimer la valeur efficace $I_{2\ eff}$ du courant secondaire en fonction de $I_s$ et $\alpha$.
-\item La densité de courant choisie pour ces deux bobinages réalisés en fil de cuivre est $\delta$. Déterminer l'expression de la surface totale de cuivre, notée $S_{T\ Cu}$, en fonction de $I_s$, $\delta$, $n_2$ et $\alpha$. Comparer les surfaces de cuivre primaire et secondaire.
-\item En déduire la surface minimale de la fenêtre de bobinage, notée $S_B$, si l'on choisit un coefficient de bobinage $k_B$ ($S_{T\ Cu} = k_B.S_B$).
-\end{enumerate}
 }{
 \item \textbf{Winding window area}
+}
 
+\ifthenelse{\equal{\Langue}{FR}}{
+On reste en régime critique (début de charge)
+}{
 We are still in the critical mode (start of charging).
+}
 
 \begin{enumerate}
+\ifthenelse{\equal{\Langue}{FR}}{
+\item En utilisant les résultats de la première partie, déterminer la valeur efficace $I_{1\ eff}$ du courant dans le transistor en fonction du courant de sortie $I_s$, de $m$ et $\alpha$.
+}{
 \item Using the results from the first part, determine the RMS value of the current in the transistor $I_{1\ eff}$ in terms of the output current $I_s$, $m$, and $\alpha$.
-\item Similarly, express the RMS value  of the secondary current $I_{2\ eff}$ in terms of $I_s$ and $\alpha$.
-\item The chosen current density for both windings made of copper wire is $\delta$. Determine the expression of the total copper area, denoted as $S_{T\ Cu}$, in terms of $I_s$, $\delta$, $n_2$, and $\alpha$. Compare the primary and secondary copper areas.
-\item Deduce the minimum winding window area, denoted as $S_B$, if a winding coefficient $k_B$ is chosen ($S_{T\ Cu} = k_B.S_B$).
-\end{enumerate}
 }
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$i_{1 \max} = \dfrac{2 m I_S}{1-\alpha}$
+
+$I_{1\ eff}^2 = \dfrac{1}{T} \int_0^{T} i_1^2 dt = \dfrac{1}{T} \int_0^{\alpha T} {\left(i_{1 \max}\dfrac{t}{\alpha T}\right)}^2 dt = \dfrac{i_{1 \max}^2}{\alpha^2 T^3} \dfrac{{(\alpha T)}^3}{3} = i_{1 \max}^2\dfrac{\alpha}{3}$
+
+$I_{1\ eff} = i_{1 \max} \sqrt{\dfrac{\alpha}{3}} = \dfrac{2 m I_S}{1-\alpha} \sqrt{\dfrac{\alpha}{3}}$
+}
+
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Faire de même pour exprimer la valeur efficace $I_{2\ eff}$ du courant secondaire en fonction de $I_s$ et $\alpha$.
+}{
+\item Similarly, express the RMS value  of the secondary current $I_{2\ eff}$ in terms of $I_s$ and $\alpha$.
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$I_{2\ eff} = i_{2 \max} \sqrt{\dfrac{1-\alpha}{3}} = \dfrac{i_{1 \max}}{m} \sqrt{\dfrac{1-\alpha}{3}} = \dfrac{2 I_S}{1-\alpha} \sqrt{\dfrac{1-\alpha}{3}}$
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item La densité de courant choisie pour ces deux bobinages réalisés en fil de cuivre est $\delta$. Déterminer l'expression de la surface totale de cuivre, notée $S_{T\ Cu}$, en fonction de $I_s$, $\delta$, $n_2$ et $\alpha$. Comparer les surfaces de cuivre primaire et secondaire.
+}{
+\item The chosen current density for both windings made of copper wire is $\delta$. Determine the expression of the total copper area, denoted as $S_{T\ Cu}$, in terms of $I_s$, $\delta$, $n_2$, and $\alpha$. Compare the primary and secondary copper areas.
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$S_{T\ Cu} = n_1 \dfrac{I_{1\ eff}}{\delta} + n_2 \dfrac{I_{2\ eff}}{\delta} = \dfrac{2 n_2 I_S}{\delta (1-\alpha)} \sqrt{\dfrac{\alpha}{3}} + \dfrac{2 n_2 I_S}{\delta (1-\alpha)} \sqrt{\dfrac{1-\alpha}{3}}$
+
+$S_{T\ Cu} = \dfrac{2 n_2 I_S}{\delta (1-\alpha)} \left(\sqrt{\dfrac{\alpha}{3}} + \sqrt{\dfrac{1-\alpha}{3}}\right)$
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item En déduire la surface minimale de la fenêtre de bobinage, notée $S_B$, si l'on choisit un coefficient de bobinage $k_B$ ($S_{T\ Cu} = k_B.S_B$).
+}{
+\item Deduce the minimum winding window area, denoted as $S_B$, if a winding coefficient $k_B$ is chosen ($S_{T\ Cu} = k_B.S_B$).
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$S_{B \min} = \dfrac{S_{T\ Cu}}{k_B} = \dfrac{2 n_2 I_S}{k_B \delta (1-\alpha)} \left(\sqrt{\dfrac{\alpha}{3}} + \sqrt{\dfrac{1-\alpha}{3}}\right)$
+}
+
+\end{enumerate}
+
 
 %%%%%% Partie 5 %%%%%%%
 \ifthenelse{\equal{\Langue}{FR}}{
 \item \textbf{Choix du noyau magnétique}
-
-\begin{enumerate}
-\item A partir des résultats des questions précédentes, déterminer l'inégalité que doit vérifier le produit $A_e.S_B$ de cette alimentation en fonction de $B_{sat}$, $P_s$, $T$, $k_B$, $\delta$ et $\alpha$.
-\item Calculer cette valeur minimale en $mm^4$ pour les valeurs numériques suivantes:
-
-\begin{center}
-$P_s = 200 W$; $\alpha = 0.5$; $k_B = 0.5$; $B_{sat} = 0.4 T$; $\delta = 5 A.mm^{-2}$; $f = 20 kHz$.
-\end{center}
-
-\newpage
-\item Choisir un noyau parmi la liste suivante pour laquelle on donne les valeurs de $A_e$, $S_B$ et $A_L$ fournies par le constructeur (on rappelle que $A_L$ désigne l'inductance spécifique pour une spire), tous ces noyaux étant réalisés avec le même matériau $N41$.
 }{
 \item \textbf{Choice of magnetic core}
+}
 
 \begin{enumerate}
+\ifthenelse{\equal{\Langue}{FR}}{
+\item A partir des résultats des questions précédentes, déterminer l'inégalité que doit vérifier le produit $A_e.S_B$ de cette alimentation en fonction de $B_{sat}$, $P_s$, $T$, $k_B$, $\delta$ et $\alpha$.
+}{
 \item Based on the previous questions, determine the inequality that the product $A_e.S_B$ of this power supply must satisfy in terms of $B_{sat}$, $P_s$, $T$, $k_B$, $\delta$, and $\alpha$.
-\item Calculate the minimum value of this product in $mm^4$ for the following numerical values:
+}
 
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$A_e S_B > \dfrac{E \alpha T}{n_1 B_{sat}} \dfrac{2 n_2 I_S}{k_B \delta (1-\alpha)} \left(\sqrt{\dfrac{\alpha}{3}} + \sqrt{\dfrac{1-\alpha}{3}}\right)$
+
+$P_S = V_S I_S = \dfrac{E m \alpha}{1-\alpha} I_S$ $\rightarrow$ $A_e S_B > \dfrac{2 P_S T}{B_{sat} k_B \delta} \left(\sqrt{\dfrac{\alpha}{3}} + \sqrt{\dfrac{1-\alpha}{3}}\right)$
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Calculer cette valeur minimale en $mm^4$ pour les valeurs numériques suivantes:
+}{
+\item Calculate the minimum value of this product in $mm^4$ for the following numerical values:
+}
 \begin{center}
 $P_s = 200 W$; $\alpha = 0.5$; $k_B = 0.5$; $B_{sat} = 0.4 T$; $\delta = 5 A.mm^{-2}$; $f = 20 kHz$.
 \end{center}
 
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$A_e S_B > 16 328 mm^4$
+}
+
+\ifthenelse{\equal{\SuCorr}{SU}}{\newpage}
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Choisir un noyau parmi la liste suivante pour laquelle on donne les valeurs de $A_e$, $S_B$ et $A_L$ fournies par le constructeur (on rappelle que $A_L$ désigne l'inductance spécifique pour une spire), tous ces noyaux étant réalisés avec le même matériau $N41$.
+}{
 \item Choose a core from the following list, for which the manufacturer provides the values of $A_e$, $S_B$, and $A_L$ (specific inductance) without air gap, as well as $A_L$ with a 0.5 mm air gap. Note that all these cores are made of the same material, $N41$.
 }
 
 \vspace{1mm}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\multirow{2}*{Core} & \multirow{2}*{$A_e\ (mm^2)$} & \multirow{2}*{$S_B \ (mm^2)$} & $A_L$ without air gap & $A_L$ 0.5 mm air gap\\
+\ifthenelse{\equal{\Langue}{FR}}{\multirow{2}*{Noyau}}{\multirow{2}*{Core}} & \multirow{2}*{$A_e\ (mm^2)$} & \multirow{2}*{$S_B \ (mm^2)$} & $A_L$ \ifthenelse{\equal{\Langue}{FR}}{sans gap d'air}{without air gap} & $A_L$ 0.5 mm \ifthenelse{\equal{\Langue}{FR}}{gap d'air}{air gap}\\
 & & & (nH) & (nH)\\
 \hline
 RM6 & 31 & 32 & 3100 & ---\\
@@ -318,17 +407,52 @@ RM14 & 170 & 176 & 6800 & 400 \\
 
 \vspace{1mm}
 
+\ifthenelse{\equal{\SuCorr}{CO}}{
+\begin{tabular}{|c|c|c|c|}
+\hline
+\ifthenelse{\equal{\Langue}{FR}}{Noyau}{Core} & $A_e\ (mm^2)$ & $S_B \ (mm^2)$ & $A_e S_B \ (mm^4)$\\
+\hline
+RM6 & 31 & 32 & 992 \\
+\hline
+RM8 & 55 & 57 & 3135 \\
+\hline
+RM10 & 90 & 93 & 8550 \\
+\hline
+RM12 & 125 & 128 & 16000 \\
+\hline
+RM14 & 170 & 176 & 29920 \\
+\hline
+\end{tabular}
+
+\vspace{1mm}
+$\Rightarrow$ RM14
+}
+
 \ifthenelse{\equal{\Langue}{FR}}{
 \item Pour ce choix de noyau, déterminer alors les nombres de spires minimaux $n_1$ et $n_2$ pour limiter l'induction maximale dans la ferrite à $B_{sat}$. Pour ces calculs, on choisira  ``au mieux'' ces valeurs de nombres de spires pour les valeurs numériques ci-dessus.
-
-\item Un entrefer sera-t-il nécessaire afin d'obtenir l'inductance $L_1$ souhaitée?
-\end{enumerate}
 }{
 \item For this choice of core, determine the minimum numbers of turns $n_1$ and $n_2$ to limit the maximum induction in the ferrite core to $B_{sat}$. For these calculations, choose the values of the numbers of turns that are ``optimal'' for the given numerical values.
-
-\item Will an air gap be necessary to achieve the desired inductance $L_1$?
-\end{enumerate}
 }
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$ B < B_{sat} \rightarrow n_1 > \dfrac{E \alpha T}{B_{sat} A_e} = 110.3 \rightarrow n_1 = 111$
+
+$n_2 = m n_1 = 7.4 \rightarrow n_2 = 8$
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Un entrefer sera-t-il nécessaire afin d'obtenir l'inductance $L_1$ souhaitée?
+}{
+\item Will an air gap be necessary to achieve the desired inductance $L_1$?
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+$L_1 = n_1^2 A_L \rightarrow A_L = \dfrac{L_1}{n_1^2} = 227 nH$ 
+
+\ifthenelse{\equal{\Langue}{FR}}{Besoin d'un entrefer supérieur à 0.5 mm}{Need for an air gap greater than 0.5 mm}}
+
+\end{enumerate}
+
 
 
 

@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "TP Buck (LT1959)")
-		(date "2026-06-19")
+		(date "2026-06-22")
 		(rev "V2")
 		(company "ENSEA")
 		(comment 1 "A. Martin")
@@ -7819,7 +7819,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "i_l-"
+		(property "Value" "i_l+"
 			(at 187.452 76.708 0)
 			(effects
 				(font
@@ -9103,7 +9103,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "i_l+"
+		(property "Value" "i_l-"
 			(at 198.628 76.708 0)
 			(effects
 				(font
@@ -9531,7 +9531,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "5.7"
 			(at 144.78 148.5899 90)
 			(effects
 				(font
@@ -9816,7 +9816,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "i_c-"
+		(property "Value" "i_c+"
 			(at 32.512 111.252 0)
 			(effects
 				(font
@@ -10015,7 +10015,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "i_c+"
+		(property "Value" "i_c-"
 			(at 32.512 122.428 0)
 			(effects
 				(font
@@ -10083,7 +10083,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5.6"
+		(property "Value" "47"
 			(at 128.27 148.5899 90)
 			(effects
 				(font
