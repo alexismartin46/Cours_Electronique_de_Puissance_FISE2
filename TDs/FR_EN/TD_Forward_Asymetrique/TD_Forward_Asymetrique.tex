@@ -1,72 +1,319 @@
+\ifthenelse{\equal{\Langue}{FR}}{
 \chapter{Alimentation à découpage directe (FORWARD Asymétrique)}
+}{
+\chapter{Direct Switching Power Supply (Asymmetric FORWARD)}
+}
 
-Le but de ce problème est l’étude simplifiée du convertisseur à découpage représenté sur la figure suivante :
+\ifthenelse{\equal{\Langue}{FR}}{
+Le but de ce problème est l'étude simplifiée du convertisseur à découpage représenté sur la figure suivante:
+}{
+The purpose of this problem is the simplified study of the switching converter shown in the following figure:
+}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.85\linewidth]{TD_Forward_Asymetrique/fig/Forward_Asymetrique.png}
 \end{figure}
 
-Tous les semi-conducteurs sont supposés parfaits. Les deux bobinages du transformateur sont réalisés sur le même noyau ferromagnétique sans fuites : toutes les spires ''enlacent''  donc le même flux élémentaire $\varphi$, la réluctance de ce circuit magnétique étant notée $R$. La bobine d'inductance $L$ en sortie est indépendante de ce transformateur. Toutes les résistances sont négligées.
+\ifthenelse{\equal{\Langue}{FR}}{
+Tous les semi-conducteurs sont supposés parfaits. Les deux bobinages du transformateur sont réalisés sur le même noyau ferromagnétique sans fuites: toutes les spires ``enlacent''  donc le même flux élémentaire $\varphi$, la réluctance de ce circuit magnétique étant notée $R$. La bobine d'inductance $L$ en sortie est indépendante de ce transformateur. Toutes les résistances sont négligées.
 
-La commande des transistors est identique, réalisée à la période $T$, avec un rapport cyclique noté $\alpha$ : ils sont donc conducteurs
-sur l'intervalle $[0,\ \alpha.T]$, bloqués sur l’intervalle $[\alpha.T,\ T]$.
+La commande des transistors est identique, réalisée à la période $T$, avec un rapport cyclique noté $\alpha$: ils sont donc conducteurs sur l'intervalle $[0,\ \alpha.T]$, bloqués sur l'intervalle $[\alpha.T,\ T]$.
 
-La tension de sortie $V_s$ est supposée constante dans toute l’étude et le dispositif sera maintenu en démagnétisation totale à chaque cycle de fonctionnement. On ne s'intéresse qu'au régime de conduction continue dans l'inductance de sortie $L$, son courant ne s'annulant donc jamais : $i_L > 0$.
+La tension de sortie $V_s$ est supposée constante dans toute l'étude et le dispositif sera maintenu en démagnétisation totale à chaque cycle de fonctionnement. On ne s'intéresse qu'au régime de conduction continue dans l'inductance de sortie $L$, son courant ne s'annulant donc jamais: $i_L > 0$.
+}{
+All semiconductors are assumed to be perfect. The two windings of the transformer are made on the same ferromagnetic core without leakage: all the turns therefore ``enclose'' the same elementary flux $\varphi$, the reluctance of this magnetic circuit being denoted $R$. The output inductor $L$ is independent of this transformer. All resistances are neglected.
 
+The control of the transistors is identical, carried out at the period $T$, with a duty cycle denoted $\alpha$: they are therefore conducting on the interval $[0,\ \alpha.T]$, blocked on the interval $[\alpha.T,\ T]$.
+
+The output voltage $V_s$ is assumed to be constant throughout the study and the device will be maintained in total demagnetization at each operating cycle. We are only interested in the continuous conduction mode in the output inductor $L$, so its current never goes to zero: $i_L > 0$.
+
+}
 \begin{enumerate}
+\ifthenelse{\equal{\Langue}{FR}}{
 \item \textbf{Fonctionnement général de l'alimentation}
+}{
+\item \textbf{General operation of the power supply}
+}
 
-Dans cette partie, nous allons étudier le fonctionnement de l’alimentation. On supposera qu'elle fonctionne en \textbf{démagnétisation totale}, c'est à dire qu'à la fin d'une période, le flux magnétique dans le transformateur est nul. On tracera au fur et à mesure les courbes temporelles de $\varphi$ (flux magnétique dans le transformateur), $v_1$, $v_2$, $v_{DS}$ (tension drain-source du transistor $T_1$), $v_L$, $i_1$, $i_2$, $i_L$, et $i_E$.
+\ifthenelse{\equal{\Langue}{FR}}{
+Dans cette partie, nous allons étudier le fonctionnement de l'alimentation. On supposera qu'elle fonctionne en \textbf{démagnétisation totale}, c'est à dire qu'à la fin d'une période, le flux magnétique dans le transformateur est nul. On tracera au fur et à mesure les courbes temporelles de $\varphi$ (flux magnétique dans le transformateur), $v_1$, $v_2$, $v_{DS}$ (tension drain-source du transistor $T_1$), $v_L$, $i_1$, $i_2$, $i_L$, et $i_E$.
+}{
+In this part, we will study the operation of the power supply. We will assume that it operates in \textbf{total demagnetization}, meaning that at the end of a period, the magnetic flux in the transformer is zero. We will plot the time curves of $\varphi$ (magnetic flux in the transformer), $v_1$, $v_2$, $v_{DS}$ (drain-source voltage of transistor $T_1$), $v_L$, $i_1$, $i_2$, $i_L$, and $i_E$.
+}
 
 \begin{enumerate}
-
-\item Compte tenu des sens des enroulements représentés sur le schéma et des sens de mesure des différents courants et tensions :
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Compte tenu des sens des enroulements représentés sur le schéma et des sens de mesure des différents courants et tensions:
+}{
+\item Considering the directions of the windings shown in the diagram and the directions of measurement of the different currents and voltages:
+}
 \begin{enumerate}
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Donner l'expression des tensions $v_1$ et $v_2$ en fonction du flux $\varphi$
+}{
+\item Give the expression of the voltages $v_1$ and $v_2$ as a function of the flux $\varphi$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Exprimer la relation d'Hopkinson liant les courants $i_1$ et $i_2$ à ce même flux $\varphi$ au moyen des nombres de spires et de la réluctance $R$.
+}{
+\item Express the Hopkinson's law relating the currents $i_1$ and $i_2$ to the same flux $\varphi$ using the number of turns and the reluctance $R$.
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
 \end{enumerate}
 
-\item On se place sur l'intervalle $[0,\ \alpha T]$ : on suppose que le flux initial à t = 0 est nul (démagnétisation totale)
+\ifthenelse{\equal{\Langue}{FR}}{
+\item On se place sur l'intervalle $[0,\ \alpha T]$: on suppose que le flux initial à t = 0 est nul (démagnétisation totale)
+}{
+\item We consider the interval $[0,\ \alpha T]$: we assume that the initial flux at $t = 0$ is zero (total demagnetization)
+}
 \begin{enumerate}
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Déterminer la tension $v_1$ appliquée au bobinage primaire
+}{
+\item Determine the voltage $v_1$ applied to the primary winding
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item En déduire la tensions $v_2$ ainsi que l'état des diodes $D3$ et $D4$
+}{
+\item Deduce the voltage $v_2$ as well as the state of diodes $D3$ and $D4$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Donner l'expression de la tension $v_L$ aux bornes de l'inductance de sortie en fonction des nombres de spires, de $E$ et $V_S$
+}{
+\item Give the expression of the voltage $v_L$ across the output inductance in terms of the number of turns, $E$, and $V_S$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Exprimer l'évolution du flux $\varphi (t)$ sur cet intervalle de temps
+}{
+\item Express the evolution of the flux $\varphi (t)$ during this time interval
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Exprimer le courant $i_2$ en fonction de $i_L$
+}{
+\item Express the current $i_2$ in terms of $i_L$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item A partir de la relation d'Hopkinson et des résultats précédents, déterminer l'expression du courant primaire $i_1$ en fonction de $i_L$ et du flux $\varphi$ au moyen des nombres de spires et de la réluctance $R$
+}{
+\item Using the Hopkinson's law and the previous results, determine the expression of the primary current $i_1$ in terms of $i_L$ and the flux $\varphi$ using the number of turns and the reluctance $R$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item A l'instant $\alpha T$, fin de ce premier intervalle de temps, on suppose que le flux est devenu égal à $\varphi_0$. En déduire l'expression de cette valeur de $\varphi_0$ en fonction de $E$, $n_1$ et $\alpha T$
+}{
+\item At the instant $\alpha T$, the end of this first time interval, we assume that the flux has become equal to $\varphi_0$. Deduce the expression of this value of $\varphi_0$ in terms of $E$, $n_1$, and $\alpha T$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
 \end{enumerate}
 
-\item On se place sur l'intervalle $[\alpha T,\ T]$ : tous les transistors sont bloqués. 
+\ifthenelse{\equal{\Langue}{FR}}{
+\item On se place sur l'intervalle $[\alpha T,\ T]$: tous les transistors sont bloqués. 
+}{
+\item We consider the interval $[\alpha T,\ T]$: all transistors are blocked.
+}
 \begin{enumerate}
-\item A $t=\alpha T$, déterminer l'état des diodes $D1$ et $D2$. Quelle sont les valeurs des tensions $v_1$ et $v_2$ ? En déduire l'état des diodes $D3$ et $D4$
+\ifthenelse{\equal{\Langue}{FR}}{
+\item A $t=\alpha T$, déterminer l'état des diodes $D1$ et $D2$. Quelle sont les valeurs des tensions $v_1$ et $v_2$? En déduire l'état des diodes $D3$ et $D4$
+}{
+\item At $t=\alpha T$, determine the state of diodes $D1$ and $D2$. What are the values of voltages $v_1$ and $v_2$? Deduce the state of diodes $D3$ and $D4$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item En déduire l'expression de $v_L$ en fonction de $V_S$
+}{
+\item Deduce the expression of $v_L$ in terms of $V_S$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Exprimer l'évolution du flux $\varphi(t)$ sur cet intervalle de temps
-\item A quel instant $t_0$ le flux s'annule ? Donner une condition sur $\alpha$ pour que le système fonctionne en démagnétisation totale
-\item Que se passe-t-il ensuite jusqu’à la fin de la période T ?
+}{
+\item Express the evolution of the flux $\varphi(t)$ during this time interval
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item A quel instant $t_0$ le flux s'annule? Donner une condition sur $\alpha$ pour que le système fonctionne en démagnétisation totale
+}{
+\item At what instant $t_0$ does the flux become zero? Give a condition on $\alpha$ for the system to operate in total demagnetization
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Que se passe-t-il ensuite jusqu'à la fin de la période T\@?
+}{
+\item What happens next until the end of the period T\@?
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
 \end{enumerate}
 
-\item L’alimentation est destinée à fabriquer une tension constante de valeur 24 V à partir du réseau monophasé redressé parfaitement filtré, $E = 300 V$. La puissance transmise est $P_n = 600 W$, la fréquence de découpage est $f = 50 kHz$. On choisit de faire fonctionner l’alimentation autour du rapport cyclique nominal $\alpha = 0.4$.
+\ifthenelse{\equal{\Langue}{FR}}{
+\item L'alimentation est destinée à fabriquer une tension constante de valeur 24 V à partir du réseau monophasé redressé parfaitement filtré, $E = 300 V$. La puissance transmise est $P_n = 600 W$, la fréquence de découpage est $f = 50 kHz$. On choisit de faire fonctionner l'alimentation autour du rapport cyclique nominal $\alpha = 0.4$.
+}{
+\item The power supply is intended to produce a constant voltage of 24 V from the perfectly filtered single-phase rectified network, $E = 300 V$. The transmitted power is $P_n = 600 W$, and the switching frequency is $f = 50 kHz$. We choose to operate the power supply around the nominal duty cycle $\alpha = 0.4$.
+}
 \begin{enumerate}
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Calculer le rapport de transformation $n_2/n_1$
+}{
+\item Calculate the turns ratio $n_2/n_1$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Calculer la valeur moyenne $I_s$ du courant $i_L$
-\item Calculer la valeur minimale à donner à l’inductance $L$ pour limiter l’ondulation crête à crête du courant $i_L$ à 5\% de sa valeur moyenne $I_s$. \underline{On gardera cette} \underline{valeur de $L$ par la suite}
-\item En déduire la valeur maximale $I_{1\ max}$ du courant dans le transistor lorsque l’on néglige le courant magnétisant
-\end{enumerate}
+}{
+\item Calculate the average value $I_s$ of the current $i_L$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Calculer la valeur minimale à donner à l'inductance $L$ pour limiter l'ondulation crête à crête du courant $i_L$ à 5\% de sa valeur moyenne $I_s$.\ \underline{On gardera cette} \underline{valeur de $L$ par la suite}
+}{
+\item Calculate the minimum value to be given to the inductance $L$ to limit the peak-to-peak ripple of the current $i_L$ to 5\% of its average value $I_s$.\ \underline{Keep this} \underline{value of $L$ for the following calculations}
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item En déduire la valeur maximale $I_{1\ \max}$ du courant dans le transistor lorsque l'on néglige le courant magnétisant
+}{
+\item Deduce the maximum value $I_{1\ \max}$ of the current in the transistor when neglecting the magnetizing current
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
 
 \end{enumerate}
 
+\end{enumerate}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item \textbf{Dimensionnement du transformateur}
-
+}{
+\item \textbf{Transformer sizing}
+}
 \begin{enumerate}
-\item Pour justifier l'hypothèse précédente, déterminer la valeur minimale de l’inductance magnétisante $L_1$ (vue du bobinage au primaire) rendant le courant à vide maximal inférieur à $I_{1\ max} /20$
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Pour justifier l'hypothèse précédente, déterminer la valeur minimale de l'inductance magnétisante $L_1$ (vue du bobinage au primaire) rendant le courant à vide maximal inférieur à $I_{1\ \max} /20$
+}{
+\item To justify the previous assumption, determine the minimum value of the magnetizing inductance $L_1$ (seen from the primary winding) that makes the maximum no-load current less than $I_{1\ \max} /20$
+}
 
-\item \underline{En négligeant l’ondulation du courant $i_L$ et le courant magnétisant}, déterminer les valeurs efficaces $I_{1\ eff}$ et
-$I_{2\ eff}$ des courants $i_1$ et $i_2$ en fonction de $I_s$, $n_1$ , $n_2$ et $\alpha$
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item \underline{En négligeant l'ondulation du courant $i_L$ et le courant magnétisant}, déterminer les valeurs efficaces $I_{1\ eff}$ et
+$I_{2\ eff}$ des courants $i_1$ et $i_2$ en fonction de $I_s$, $n_1$, $n_2$ et $\alpha$
+}{
+\item \underline{Neglecting the ripple of the current $i_L$ and the magnetizing current}, determine the rms values $I_{1\ eff}$ and
+$I_{2\ eff}$ of the currents $i_1$ and $i_2$ in terms of $I_s$, $n_1$, $n_2$, and $\alpha$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item Déterminer, avec ces mêmes hypothèses, la surface de bobinage minimale nécessaire $S_B$ en fonction de $\delta$ (densité de courant), $k_B$ (coefficient de bobinage), $I_s$, $n_2$ et $\alpha$
-\item Donner également l’expression de la section minimale $A_e$ du noyau permettant d’éviter la saturation du noyau en maintenant une induction maximale inférieure à $B_{max}$
+}{
+\item Determine, with these same assumptions, the minimum winding area $S_B$ required in terms of current density $\delta$, winding coefficient $k_B$, $I_s$, $n_2$, and $\alpha$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
+\item Donner également l'expression de la section minimale $A_e$ du noyau permettant d'éviter la saturation du noyau en maintenant une induction maximale inférieure à $B_{\max}$
+}{
+\item Also give the expression of the minimum cross-sectional area $A_e$ of the core that avoids core saturation by maintaining a maximum induction below $B_{\max}$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
+
+\ifthenelse{\equal{\Langue}{FR}}{
 \item En déduire le produit de dimensionnement $A_e.S_B$ minimal de ce transformateur en fonction du rapport cyclique, des différents paramètres caractéristiques de cette alimentation, notamment sa puissance de sortie $P_S$ et sa fréquence de découpage $f$
+}{
+\item Deduce the minimal sizing product $A_e.S_B$ of this transformer in terms of the duty cycle, the different characteristic parameters of this power supply, including its output power $P_S$, and its switching frequency $f$
+}
+
+\ifthenelse{\equal{\SuCorr}{CO}}{
+
+}
 
 \end{enumerate}
 
