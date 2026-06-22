@@ -35,3 +35,5 @@ Sujets en anglais et français
 - Hacheur 4 quadrants + MCC
 - Flyback
 - Forward
+
+Maquette de TP "Buck" autour du LT1959 (Analog Device). PCB réalisé avec KiCAD
