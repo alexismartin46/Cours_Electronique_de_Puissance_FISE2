@@ -1,6 +1,6 @@
 # <u>ENSEA</u> : Cours Electronique de Puissance FISE2
 
-Module enseigné en Français et Anglais à l'ENSEA : Ecole Nationnale Supérieure d'Electronique et de ses Applications. 2ème année Formation Ingénieur (M1)
+Module enseigné en Français et Anglais à l'ENSEA : Ecole Nationale Supérieure de l'Electronique et de ses Applications. 2ème année Formation Ingénieur (M1)
 Le cours porte sur les convertisseurs DC/DC.
 
 Volume horaire :
