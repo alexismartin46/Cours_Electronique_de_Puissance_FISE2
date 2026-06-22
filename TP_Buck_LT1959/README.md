@@ -16,8 +16,8 @@ Cette maquette est développée autour du LT1959, controleur de Buck avec transi
 - Courant d'entrée max possible pour le LT1959 : 4 A
 - Sécurité contre l'inversion de la tension en entrée, contre les surtensions en entrée, ainsi que les court-circuit
 
-La maquette telle qu'elle est développée, permet d'étudier le mode de conduction contunu et discontinu d'un tel convertisseur (CCM et DCM).
+La maquette telle qu'elle est développée, permet d'étudier le mode de conduction continu et discontinu d'un tel convertisseur (CCM et DCM).
 
 
-Il est possible de changer certaines valeurs de composants afin de l'adapter à l'objectif pédagogique visé. Entre autre, la tension de sortie peut être changée en modifiant les valeurs des résistances *R2* et *R3*.
+Il est possible de changer certaines valeurs de composants afin de l'adapter à l'objectif pédagogique visé. Entre autre, la tension de sortie peut être changée en modifiant les valeurs des résistances *R2* et *R3*. Attention cependant à prendre des résistances de sortie *R5*, *R6* et *R7* tenant la puissance.
 
