@@ -10,7 +10,7 @@ Le but de ce problème est l'étude simplifiée du convertisseur à découpage r
 The purpose of this problem is the simplified study of the switching converter shown in the following figure:
 }
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.85\linewidth]{TD_Forward_Asymetrique/fig/Forward_Asymetrique.png}
 \end{figure}
@@ -56,7 +56,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$v_1 = + n_1 \dfrac{d\varphi}{dt}$ \ hspace{1cm} $v_2 = + n_2 \dfrac{d\varphi}{dt}$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -66,7 +66,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$n_1 i_1 - n_2 i_2 = R . \varphi$
 }
 
 \end{enumerate}
@@ -84,6 +84,18 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$0 < t < \alpha T$:
+
+\begin{minipage}{0.45\linewidth}
+\centering
+\includegraphics[width=\linewidth]{TD_Forward_Asymetrique/fig/0aT_schema_input.png}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\centering
+\ifthenelse{\equal{\Langue}{FR}}{$T_1$ et $T_2$ sont ``fermés''}{$T_1$ and $T_2$ are ``closed''}: 
+
+$v_1 = E$
+\end{minipage}
 
 }
 
@@ -94,7 +106,12 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.75\linewidth]{TD_Forward_Asymetrique/fig/0aT_schema.png}
+\end{figure}
 
+$v_2 = \dfrac{n_2}{n_1} E > 0$ $\Rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{$D3$ est passante et $D4$ est bloquée}{$D3$ is forward and $D4$ is reverse}
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -104,7 +121,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$v_L = v_2 - V_S = \dfrac{n_2}{n_1} E - V_S$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -114,8 +131,13 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$v_1 = E = n_1 \dfrac{d\varphi}{dt} \Rightarrow \varphi (t) = \dfrac{E}{n_1} t + cste$
 
+\ifthenelse{\equal{\Langue}{FR}}{A}{At} $t = 0$, $\varphi (0) = 0 \Rightarrow cste = 0$
+
+$\varphi (t) = \dfrac{E}{n_1} t$
 }
+
 
 \ifthenelse{\equal{\Langue}{FR}}{
 \item Exprimer le courant $i_2$ en fonction de $i_L$
@@ -124,7 +146,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$i_2 = i_L$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -134,7 +156,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$n_1 i_1 - n_2 i_2 = R . \varphi \Rightarrow i_1 = \dfrac{n_2}{n_1} i_L + \dfrac{R}{n_1} \varphi$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -144,7 +166,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$\varphi_0 = \varphi(\alpha T) = \dfrac{E}{n_1} \alpha T$
 }
 
 \end{enumerate}
@@ -162,6 +184,27 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$\alpha T < t < T$: \ifthenelse{\equal{\Langue}{FR}}{$T_1$ et $T_2$ sont ``ouverts''}{$T_1$ and $T_2$ are ``opened''}
+\ifthenelse{\equal{\Langue}{FR}}{A}{At} $t = \alpha T^+$, $\varphi(\alpha T^+) = \varphi_0$ (\ifthenelse{\equal{\Langue}{FR}}{Continuité du flux}{Flux continuity})
+
+\ifthenelse{\equal{\Langue}{FR}}{De plus}{Furthermore}, $i_2>=0$ (\ifthenelse{\equal{\Langue}{FR}}{Courant dans la diode $D3$}{Current in diode $D3$}) 
+
+$n_1 i_1 - n_2 i_2 = R . \varphi \Rightarrow i_1 = \dfrac{n_2}{n_1} i_2 + \dfrac{R}{n_1} \varphi >0$ 
+
+$\Rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{$D1$ et $D2$ sont passantes}{$D1$ and $D2$ are forward}
+
+\begin{minipage}{0.45\linewidth}
+\centering
+\includegraphics[width=\linewidth]{TD_Forward_Asymetrique/fig/aTT_schema_input.png}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\centering
+$v_1 = -E$
+
+$v_2 = -\dfrac{n_2}{n_1} E < 0$
+
+$\Rightarrow$ \ifthenelse{\equal{\Langue}{FR}}{$D3$ est bloquée et $D4$ est passante}{$D3$ is reverse and $D4$ is forward}
+\end{minipage}
 
 }
 
@@ -172,7 +215,12 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.75\linewidth]{TD_Forward_Asymetrique/fig/aTT_schema.png}
+\end{figure}
 
+$v_L = v_2 - V_S = - V_S$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -182,7 +230,9 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$\varphi(\alpha T) = \varphi_0$
 
+$v_1 = -E = n_1 \dfrac{d\varphi}{dt} \Rightarrow \varphi (t) = -\dfrac{E}{n_1} (t - \alpha T) + \varphi_0$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -192,7 +242,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$\varphi(t_0) = 0 \Rightarrow t_0 = \alpha T + \dfrac{n_1}{E} \varphi_0 = 2 \alpha T$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -202,7 +252,24 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+\begin{itemize}
+\item \ifthenelse{\equal{\Langue}{FR}}{Si $D_1$ et $D_2$ sont passantes}{If $D_1$ and $D_2$ are forward}:
 
+$v_1 = -E \Rightarrow \varphi \searrow \Rightarrow \varphi <0$
+
+$n_2 i_2 = n_1 i_1 - R \varphi > 0 \rightarrow D_3$ \ifthenelse{\equal{\Langue}{FR}}{passante}{forward}
+
+\ifthenelse{\equal{\Langue}{FR}}{Or}{But} $v_2 = -\dfrac{n_2}{n_1} E < 0 \Rightarrow D_4$ \ifthenelse{\equal{\Langue}{FR}}{passante}{forward} $\Rightarrow v_2=0$ Contradiction
+
+\end{itemize}
+
+$\Rightarrow D_1$ \ifthenelse{\equal{\Langue}{FR}}{et}{and} $D_2$ \ifthenelse{\equal{\Langue}{FR}}{bloquées}{reverse} 
+
+$\varphi$ constant
+
+$i_1 = i_2 = 0$
+
+$v_1 = v_2 = 0$
 }
 
 \end{enumerate}
@@ -220,7 +287,9 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$<v_L> = 0 \Rightarrow (\dfrac{n_2}{n_1} E - V_S)\alpha -V_S(1-\alpha) = 0$
 
+$\Rightarrow \dfrac{n_2}{n_1} = \dfrac{V_S}{\alpha E} = 0.2$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -230,7 +299,7 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$P_S = V_S I_s \Rightarrow I_s = \dfrac{P_S}{V_S} = 25\ A$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -240,7 +309,9 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$\alpha T < t < T$: $v_L = -V_S = L \dfrac{di_L}{dt} \Rightarrow \dfrac{di_L}{dt} = -\dfrac{V_S}{L}$
+\
+$\Delta i_L = \dfrac{V_S(1-\alpha)T}{L \Delta i_L} \Rightarrow L = \dfrac{V_S(1-\alpha)}{f\Delta i_L} = 0.23 mH$ 
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -250,7 +321,9 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$I_{1\ \max} = i_1(\alpha T) = \dfrac{n_2}{n_1} i_L(\alpha T) + \dfrac{R}{n_1} \varphi(\alpha T) \approx \dfrac{n_2}{n_1} i_L(\alpha T)$
 
+$I_{1\ \max} = \dfrac{n_2}{n_1} 1.025 I_s =5.1\ A$
 }
 
 \end{enumerate}
@@ -270,7 +343,11 @@ In this part, we will study the operation of the power supply. We will assume th
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$0 < t < \alpha T$: $v_1 = E = L_1 \dfrac{di_m}{dt}$
 
+$I_{m\ \max} = i_m(\alpha T) = \dfrac{E}{L_1} \alpha T < \dfrac{I_{1\ \max}}{20}$
+
+$\Rightarrow L_1 > \dfrac{20 E \alpha T}{I_{1\ \max}} = 9.4\ mH$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -282,7 +359,21 @@ $I_{2\ eff}$ of the currents $i_1$ and $i_2$ in terms of $I_s$, $n_1$, $n_2$, an
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+\begin{itemize}
+\item $0 < t < \alpha T$: 
 
+$i_1 = \dfrac{n_2}{n_1} i_S$
+
+$i_2=I_S$
+\item $\alpha T < t < T$:
+
+$i_1 = 0$
+
+$i_2=0$
+\end{itemize}
+$\Rightarrow I_{1\ eff} = \dfrac{n_2}{n_1} I_S \sqrt{\alpha}$
+
+$I_{2\ eff} = I_S \sqrt{\alpha}$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -292,7 +383,9 @@ $I_{2\ eff}$ of the currents $i_1$ and $i_2$ in terms of $I_s$, $n_1$, $n_2$, an
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$S_B = \dfrac{S_{TCu}}{\delta k_B} = \dfrac{1}{\delta k_B} (n_1 I_{1\ eff} + n_2 I_{2\ eff})$
 
+$S_B = \dfrac{1}{\delta k_B} \left(n_2 I_S \sqrt{\alpha} + n_2 I_S \sqrt{\alpha}\right) = \dfrac{2 n_2 I_S \sqrt{\alpha}}{\delta k_B}$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -302,7 +395,9 @@ $I_{2\ eff}$ of the currents $i_1$ and $i_2$ in terms of $I_s$, $n_1$, $n_2$, an
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
+$\varphi_{\max} = B_{\max} A_e = \dfrac{E}{n_1} \alpha T$
 
+$\Rightarrow A_{e \min} = \dfrac{E \alpha}{n_1 f B_{\max}}$
 }
 
 \ifthenelse{\equal{\Langue}{FR}}{
@@ -312,14 +407,18 @@ $I_{2\ eff}$ of the currents $i_1$ and $i_2$ in terms of $I_s$, $n_1$, $n_2$, an
 }
 
 \ifthenelse{\equal{\SuCorr}{CO}}{
-
+$A_e.S_B > \dfrac{2 n_2 E \alpha I_S \sqrt{\alpha}}{n_1 f B_{\max} \delta k_B} = \dfrac{2 V_S I_S \sqrt{\alpha}}{f B_{\max} \delta k_B} = \dfrac{2 P_S \sqrt{\alpha}}{f B_{\max} \delta k_B}$
 }
 
 \end{enumerate}
 
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=0.85\linewidth]{TD_Forward_Asymetrique/fig/doc_reponse.png}
+\ifthenelse{\equal{\SuCorr}{CO}}{
+\includegraphics[width=0.84\linewidth]{TD_Forward_Asymetrique/fig/doc_reponse_corrige.png}
+}{
+\includegraphics[width=0.84\linewidth]{TD_Forward_Asymetrique/fig/doc_reponse.png}
+}
 \end{figure}
