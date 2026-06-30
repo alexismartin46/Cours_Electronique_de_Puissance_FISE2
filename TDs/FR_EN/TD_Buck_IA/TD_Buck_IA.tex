@@ -28,7 +28,8 @@
 \end{itemize}
 
 \ifthenelse{\equal{\Langue}{FR}}{
-    Pour cela, on souhaite utiliser le composant suivant: \textbf{LT1959} dont un extrait de la documentation est en annexe. Afin de dimensionner tous les composants, on décide d'utiliser des IAg: Claude (Sonnet 4.6), Copilot (M365 Copilot basé sur GPT-5.5 Automatique) et ChatGPT (GPT 5.5 Instant). Les réponses des IAs ont été générées en juin 2026. Voici le Prompt utilisé:
+    Pour cela, on souhaite utiliser le composant suivant: \textbf{LT1959} dont un extrait de la documentation est en annexe. Afin de dimensionner tous les composants, on décide d'utiliser des IAg: Claude (Sonnet 4.6)%, Copilot (M365 Copilot basé sur GPT-5.5 Automatique)
+    \ et ChatGPT (GPT 5.5 Instant). Les réponses des IAs ont été générées en juin 2026. Voici le Prompt utilisé:
     
 
 \textit{``Je souhaite utiliser le composant LT1959, pour alimenter un STM32H4 à l'aide d'une batterie. Voici le cahier des charges:}
@@ -42,7 +43,8 @@
 \end{itemize}   
 \textit{Dans un fichier word, détaille moi les calculs pour le dimensionnement des composants passifs. Ajoute une image du schéma électrique. Ajoute une autre image avec la forme du courant dans l'inductance, de la tension sur la broche SW et de la tension de sortie''.}
 }{
-    To achieve this, we want to use the following component: \textbf{LT1959}, an excerpt of the documentation is attached. To size all the components, we decided to use IAs: Claude (Sonnet 4.6), Copilot (M365 Copilot based on GPT-5.5 Automatic) and ChatGPT (GPT 5.5 Instant). The AI responses were generated in June 2026 in French and then translated in English (the original Prompt and responses are in the French version of this Tutorial). Here is the translation in English of the prompt used:
+    To achieve this, we want to use the following component: \textbf{LT1959}, an excerpt of the documentation is attached. To size all the components, we decided to use IAs: Claude (Sonnet 4.6)%, Copilot (M365 Copilot based on GPT-5.5 Automatic)
+    \ and ChatGPT (GPT 5.5 Instant). The AI responses were generated in June 2026 in French and then translated in English (the original Prompt and responses are in the French version of this Tutorial). Here is the translation in English of the prompt used:
 
 \textit{``I want to use the LT1959 component to power an STM32H4 using a battery. Here are the specifications:}
 
@@ -67,11 +69,11 @@ With the AI responses and your knowledge:
 \begin{enumerate}
 \ifthenelse{\equal{\Langue}{FR}}{
 \item Représenter le schéma électrique du convertisseur Buck
-\item Donner les formes d'ondes de la tension sur la broche SW, du courant dans l'inductance et de la tension de sortie (en supposant que l'ondulation de tension vient principalement de l'ESR du condensateur)
+\item Donner les formes d'ondes, en mode de conduction continue (CCM), de la tension sur la broche SW, du courant dans l'inductance et de la tension de sortie (en supposant que l'ondulation de tension vient principalement de l'ESR du condensateur)
 \item Dimensionner les composants passifs du convertisseur Buck
 }{
 \item Draw the electrical schematic of the Buck converter
-\item Give the waveforms of the voltage on the SW pin, the current in the inductor, and the output voltage (assuming that the voltage ripple comes mainly from the ESR of the capacitor)
+\item Give the waveforms, in continuous conduction mode (CCM), of the voltage on the SW pin, the current in the inductor, and the output voltage (assuming that the voltage ripple comes mainly from the ESR of the capacitor)
 \item Size the passive components of the Buck converter
 }
 
@@ -82,11 +84,11 @@ With the AI responses and your knowledge:
 
 \newpage
 \ifthenelse{\equal{\Langue}{FR}}{
-\includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_Copilot_FR.pdf}
+%\includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_Copilot_FR.pdf}
 \includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_Claude_FR.pdf}
 \includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_ChatGPT_FR.pdf}
 }{
-\includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_Copilot_EN.pdf}
+%\includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_Copilot_EN.pdf}
 \includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_Claude_EN.pdf}
 \includepdf[pages=-]{TD_Buck_IA/Réponses_IA/Reponse_ChatGPT_EN.pdf}
 }
