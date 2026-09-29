@@ -70,28 +70,30 @@ The chopper is controlled with the control signals $f_1$, $f_2$, $f_3$ and $f_4$
 \ifthenelse{\equal{\Langue}{FR}}{
 \item Relever les caractéristiques de la machine à courant continu et en déduire la valeur de la tension continue redressée $U_E$ nécessaire pour pouvoir exploiter toute la plage de vitesse de cette machine dans les deux sens. On majorera cette valeur ``théorique'' de $U_E$ de 20 \% pour tenir compte des chutes de tension et des limitations de rapport cycliques inhérentes à la boîte de commande.
 
-\item Relever l'allure des signaux de commande notés $COM$ et $\overline{COM}$ sur la boîte de commande (on n'utilisera pas les signaux $DEC$ et $\overline{DEC}$). \textbf{On s'assurera que le rapport cyclique soit différent de 50 \%}. En déduire:
+%\item Relever l'allure des signaux de commande notés $COM$ et $\overline{COM}$ sur la boîte de commande (on n'utilisera pas les signaux $DEC$ et $\overline{DEC}$). \textbf{On s'assurera que le rapport cyclique soit différent de 50 \%}. En déduire:
+\item Relever l'allure des signaux de commande notés $TOP1 / BOT2$ et $TOP2 / BOT1$ sur la boîte de commande. \textbf{On s'assurera que le rapport cyclique soit différent de 50 \%}. En déduire:
 }{
 \item Read the characteristics of the DC machine and deduce the value of the rectified DC voltage $U_E$ necessary to exploit the entire speed range of this machine in both directions. This ``theoretical'' value of $U_E$ will be increased by 20\% to take into account voltage drops and duty cycle limitations inherent to the control box.
 
-\item Observe the shape of the control signals labeled $COM$ and $\overline{COM}$ on the control box (the signals $DEC$ and $\overline{DEC}$ will not be used). \textbf{Ensure that the duty cycle is different from 50\%}. Deduce:
+%\item Observe the shape of the control signals labeled $COM$ and $\overline{COM}$ on the control box (the signals $DEC$ and $\overline{DEC}$ will not be used). \textbf{Ensure that the duty cycle is different from 50\%}. Deduce:
+\item Observe the shape of the control signals labeled $TOP1 / BOT2$ and $TOP2 / BOT1$ on the control box. \textbf{Ensure that the duty cycle is different from 50\%}. Deduce:
 }
 \begin{itemize}
 \ifthenelse{\equal{\Langue}{FR}}{
-\item Le branchement des signaux de contrôle $COM$ et $\overline{COM}$
+\item Le branchement des signaux de contrôle $TOP1 / BOT2$ et $TOP2 / BOT1$
 \item L'allure de la tension de sortie du hacheur, notamment son amplitude et sa fréquence.
 }{
-\item The connection of the control signals $COM$ and $\overline{COM}$
+\item The connection of the control signals $TOP1 / BOT2$ and $TOP2 / BOT1$
 \item The shape of the chopper output voltage, particularly its amplitude and frequency.
 }
 \end{itemize}
 
 \ifthenelse{\equal{\Langue}{FR}}{
-\item Tracer la caractéristique de réglage de cette commande, i.e.\ le rapport cyclique de la commande $COM$ en fonction de la tension de commande externe (\textbf{variable dans l'intervalle 0 à 5V}). En déduire la valeur de cette tension imposant l'arrêt de la machine.
+\item Tracer la caractéristique de réglage de cette commande, i.e.\ le rapport cyclique de la commande $TOP1 / BOT2$ en fonction de la tension de commande externe (\textbf{variable dans l'intervalle 0 à 5V}). En déduire la valeur de cette tension imposant l'arrêt de la machine.
 
 \item Réaliser le montage complet avec les recommandations suivantes:
 }{
-\item Plot the control characteristic of this command, i.e.\ the duty cycle of the $COM$ command as a function of the external control voltage (\textbf{variable in the range 0 to 5V}). Deduce the value of this voltage that imposes the stop of the machine.
+\item Plot the control characteristic of this command, i.e.\ the duty cycle of the $TOP1 / BOT2$ command as a function of the external control voltage (\textbf{variable in the range 0 to 5V}). Deduce the value of this voltage that imposes the stop of the machine.
 
 \item Assemble the complete circuit with the following recommendations:
 }
